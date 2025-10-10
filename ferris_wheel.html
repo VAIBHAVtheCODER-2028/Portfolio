@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferris-Wheel</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-color: white;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .wheel {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid black;
+        }
+
+        .storage {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            animation: revolve 15s linear infinite;
+
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            background-color: aqua;
+            position: absolute;
+            animation: move 15s linear infinite;
+            animation-direction: alternate;
+            z-index: 1;
+        }
+        .box1 { 
+            top: -50px; 
+            left: 200px; 
+        }
+
+        .box2 { 
+            top: 200px; 
+            left: -50px; 
+        }
+
+        .box3 { 
+            top: 450px; 
+            left: 200px; 
+        }
+
+        .box4 { 
+            top: 200px; 
+            left: 450px; 
+        }
+
+        .box5 { 
+            top: 25px; 
+            left: 25px; 
+        }
+
+        .box6 { 
+            top: 25px; 
+            left: 375px; 
+        }
+
+        .box7 { 
+            top: 375px; 
+            left: 25px; 
+        }
+
+        .box8 { 
+            top: 375px; 
+            left: 375px; 
+        }
+
+        .line {
+            transform-origin: 0% 0%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 4px;
+            background-color: black;
+            position: absolute;
+        }
+
+        .line1 { transform: rotate(0deg); }
+
+        .line2 { transform: rotate(45deg); }
+
+        .line3 { transform: rotate(90deg); }
+
+        .line4 { transform: rotate(135deg); }
+
+        .line5 { transform: rotate(180deg); }
+
+        .line6 { transform: rotate(225deg); }
+
+        .line7 { transform: rotate(270deg); }
+        
+        .line8 { transform: rotate(315deg); }
+
+        @keyframes revolve {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes move {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(-90deg); }
+            100% { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wheel"></div>
+        <div class="storage">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+            <div class="box box6"></div>
+            <div class="box box7"></div>
+            <div class="box box8"></div>
+
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+            <span class="line line4"></span>
+            <span class="line line5"></span>
+            <span class="line line6"></span>
+            <span class="line line7"></span>
+            <span class="line line8"></span>
+        </div>
+    </div>
+</body>
+</html>

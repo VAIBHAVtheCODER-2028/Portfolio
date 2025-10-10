@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth and Moon Orbit</title>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 700px;
+      border: 2px solid grey;
+       background-image:url(https://media.istockphoto.com/id/536507269/photo/night-sky-with-bright-stars-and-blue-nebula.webp?b=1&s=170667a&w=0&k=20&c=Ds4PS_QR1EnY3siXlny-mfRXDUBDKTo049g2QB3zy1I=);
+      background-size: cover;
+      background-repeat: no-repeat; 
+      position: relative;
+    }
+
+    .earth {
+      background-image:url(https://png.pngtree.com/png-vector/20240528/ourlarge/pngtree-world-earth-globe-circle-on-a-transparent-background-png-image_12491950.png);
+      background-size: cover;
+      background-repeat: no-repeat; 
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+
+    }
+
+    .revolve {
+      position: absolute;
+      width: 250px;  
+      height: 250px;
+      border-radius: 50%;
+      animation: rotate 6s linear infinite;
+      }
+
+    .moon {
+      background-image:url(https://img.freepik.com/premium-psd/circular-moon-high-definition-transparency-background-psd_693425-21208.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; 
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="earth"></div>
+    <div class="revolve">
+      <div class="moon"></div>
+    </div>
+  </div>
+</body>
+</html>
